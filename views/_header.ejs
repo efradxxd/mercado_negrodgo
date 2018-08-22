@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+          <title>MERCADO_NEGRO_DURANGO</title>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link href="estilos_header.css" rel="stylesheet" type="text/css">
+          <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet" type="text/css">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+           
+        </head>
+
+        <!--ESTILOS-->
+        <style>
+            .jiterry{
+                font:400 140px/1em Amatic SC;
+                text-align:center;
+                padding-top:140px;
+                animation:jitter 200ms linear infinite;
+                display:inline-block;
+            }
+            @keyframes jitter{ 
+                50%{transform:skewY(0.7deg) skewX(-0.7deg) scale(1.006);}
+            }
+            .titulos_mamalones{
+                font:400 140px/1em Amatic SC;
+                text-align:center;
+                padding-top:1px;
+                animation:jitter 200ms linear infinite;
+                display:inline-block;
+            }
+            .titulos_mamalones2{
+                font:40 30px/1em Amatic SC;
+                text-align:center;
+                padding-top:1px;
+                animation:jitter 200ms linear infinite;
+                display:inline-block;
+            }
+            body{
+                background-image: url(https://hdwallsource.com/img/2015/5/white-abstract-wallpaper-47836-49402-hd-wallpapers.jpg); 
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: black;
+                color:  #103F47;
+                font-weight: 900;
+
+            }
+            #parrafo{
+                color: aqua;
+            }
+
+            #chat{
+                height: 400px;
+                border: 1px  solid #000;
+                width:20%;
+            }
+            #message-box {
+                width: 20%;
+
+            }
+        
+            h1{
+                color: #1B7E8E;
+                font-size: 250%;
+                font-style: oblique;
+            }
+            h3 {
+                color:  #1B7E8E;
+            }
+            container {
+                padding: 10px;
+                color: #6CC6CC;
+            }
+            .peque {
+                width: 5%;
+            }
+   
+
+            .content-carrousel img{
+            width: 300%;
+            height: 100px;
+            transition: all 300ms;
+            }
+
+            .content-carrousel img:hover{
+            transform: scale(1.2);
+            transition: all 300ms;
+
+            }
+
+            .content-carrousel figure{
+            width:65px;
+            height:100px;
+            margin-top:50px;
+            margin-right: 200px;
+            
+            text-align: center;
+            display: inline-block;
+            }
+
+        
+        </style>
+
+        <body>
+        <div class=" navbar-static-top" role="navigation"></div> 
+        <div class="container">
+        <div class="navbar-header">
+            <a class="titulos_mamalones2" href="/">MERCADO NEGRO <br> DURANGO</a>
+        
+        <ul class="nav navbar-nav navbar-right">
+            <% if (currentUsuario){%>
+            <li>
+                <a href="/edit">
+                 Bienvenido 
+            
+                </a>
+            </li>
+            <li>
+                <a href="/addarticulos">Agregar Articulo</a>
+
+            </li>
+            <li>
+                <a href="/addentretenimiento">Agregar eventos</a>
+            </li>
+            <li>
+                <a href="articulos">Articulos</a>
+            </li>
+            <li>
+                <a href="/entretenimientos">Eventos</a>
+            </li>
+            <li>
+                <a href="/singup">Registro</a>
+            </li>
+                    <li>
+                <a href="/logout">Salir</a>
+            </li>
+    <%}else{%>
+        <li>
+            <a href="/login">Entrar</a>
+        </li>
+        <li>
+            <a href="articulos">Articulos</a>
+        </li>
+        <li>
+            <a href="/entretenimientos">Eventos</a>
+        </li>
+
+    
+    <%}%>
+        </ul>
+    </div> 
+        </div>
+        <div class="container">
+            <% errors.forEach(function(error){%>
+                <div class="alert alert-danger" role="alert">
+                    <%= error%>
+                </div>
+                <%})%>
+            <% infos.forEach(function(info){%>
+                <div class="alert alert-danger" role="alert">
+                    <%= info%>
+                </div>
+            <%})%> 

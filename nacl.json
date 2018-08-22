@@ -1,0 +1,106 @@
+[{
+    "group":"invitado",
+    "permissions":[{
+        "resource":"login",
+        "methods":["GET","POST"],
+        "action":"allow"
+    },{
+        "resource":"logout",
+        "methods":["GET","POST"],
+        "action":"allow"
+    },{
+        "resource":"addarticulos",
+        "methods":["GET","POST","PUT"],
+        "action":"allow"
+    },{
+        "resource":"articulos",
+        "methods":["GET","POST"],
+        "action":"allow"
+    },{
+        "resource":"entretenimientos",
+        "methods":["GET","POST"],
+        "action":"allow"
+    }
+]
+},{
+    "group":"admin",
+    "permissions":[{
+        "resource":"login",
+        "methods":["GET","POST"],
+        "action":"allow"
+        },{
+            "resource":"logout",
+            "methods":["GET","POST","PUT"],
+            "action":"allow"
+        },{
+            "resource":"articulos",
+            "methods":["GET","POST","PUT"],
+            "action":"allow"
+        },{
+            "resource":"entretenimientos",
+            "methods":["GET","POST","PUT"],
+            "action":"allow"
+        },{
+            "resource":"addarticulos",
+            "methods":["GET","POST","PUT"],
+            "action":"allow"
+        },{
+            "resource":"addentretenimiento",
+            "methods":["GET","POST","PUT"],
+            "action":"allow"
+        },{
+            "resource":"singup",
+            "methods":["GET","POST","PUT"],
+            "action":"allow"
+        }]
+},{
+    "group":"articulo",
+    "permissions":[{
+        "resource":"login",
+        "methods":["GET","POST"],
+        "action":"allow"
+        },{
+            "resource":"logout",
+            "methods":["GET","POST","PUT"],
+            "action":"allow"
+        },{
+            "resource":"articulos",
+            "methods":["GET","POST","PUT"],
+            "action":"allow"
+        },{
+            "resource":"entretenimientos",
+            "methods":["GET","POST","PUT"],
+            "action":"allow"
+        },{
+            "resource":"addarticulos",
+            "methods":["GET","POST","PUT"],
+            "action":"allow"
+        }]
+},{
+        "group":"entertainment",
+        "permissions":[{
+            "resource":"login",
+            "methods":["GET","POST"],
+            "action":"allow"
+            },{
+                "resource":"logout",
+                "methods":["GET","POST","PUT"],
+                "action":"allow"
+            },{
+                "resource":"articulos",
+                "methods":["GET","POST","PUT"],
+                "action":"allow"
+            },{
+                "resource":"entretenimientos",
+                "methods":["GET","POST","PUT"],
+                "action":"allow"
+            },{
+                "resource":"addentretenimiento",
+                "methods":["GET","POST","PUT"],
+                "action":"allow"
+            }]
+
+}]
+        
+    
+    

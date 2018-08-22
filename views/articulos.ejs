@@ -1,0 +1,59 @@
+<%include _header%>
+<center>
+    <h1 class="titulos_mamalones" >ARTICULOS</h1>
+    <h1>__________________________________________________________</h1>
+    <br>
+    <br>
+</center>
+ 
+    <center>
+    <div class="content-carrousel">
+        <figure><img src="https://cnet2.cbsistatic.com/img/7E6SPGnp6zTB-Vg0-pThz9VzIMM=/830x467/2017/06/21/39c814c4-4909-43e8-aa0d-89eff3aced37/apple-macbook-12-inch-2017-01.jpg" >  </figure>
+        <figure><img src="https://i.ytimg.com/vi/CdP9lNLpVt0/maxresdefault.jpg">  </figure>
+        <figure><img src="https://assets.hardwarezone.com/img/2016/05/macbook-intro.jpg">  </figure>
+        <figure><img src="https://cdn2.techadvisor.co.uk/cmsdata/features/3675108/2018-macbook-release-date-price-spec-rumours_thumb800.jpg">  </figure>
+        <figure><img src="https://cnet2.cbsistatic.com/img/jFFVEXoHG1IihJlaoV-Jukvuo6w=/830x467/2015/06/03/6eb4cb42-3ac0-46f6-8e7b-d4f01dcba56a/apple-macbook-pro-15-inch-2015-07.jpg">  </figure>
+        <figure><img src="https://topesdegama.com/app/uploads/2018/07/Procesador-MacBook-Air-2.jpg">  </figure>
+        <figure><img src="http://cioal.com/wp-content/uploads/sites/2/2016/05/MacBook-2016.jpg">  </figure>
+        <figure><img src="https://i.blogs.es/37f89f/macbook-pro-review-21/450_1000.jpg">  </figure>
+    </div>
+    </center>           
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>                
+    <% articulos.forEach((articulo)=>{%>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <% if(articulo.descripcion){%>
+            <div class="panel-body">
+                <h2> <%= articulo.nombre%></h2>
+            </div>
+            <div class="col-md-3">
+                <img src="https://picsum.photos/150/200/?random" class="img-responsive ">
+            </div>
+            <a>Descripcion: </a><p><%= articulo.descripcion%>    
+            <br>
+            <a>Direccion:<p> <%= articulo.direccion%></p></a> <br>
+            <a>Numero: <p><%= articulo.numero%></p></a>
+            <br>
+            <a>Calidad: </a>  <a>***** (<%= articulo.calidad%>)</a>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    <%}%>
+</div>
+
+<%})%>
+</center>
+<br>
+<br>
+<% include _footer%>

@@ -1,0 +1,50 @@
+<%include _header%>
+<center>
+<h1 class="titulos_mamalones">Eventos</h1>
+<h1>________________________________________________________</h1>
+<br>
+<br>
+</center>
+<center>
+<div class="content-carrousel">                   
+    <figure><img src="https://i.ytimg.com/vi/vP5ITuO0crI/maxresdefault.jpg" >  </figure>
+    <figure><img src="https://i0.wp.com/ventanaviral.com/wp-content/uploads/2017/05/Cómo-hacer-la-mejor-venta-de-garage-que-tu-vencindario-ha-visto-Photo3-1.jpg?fit=800%2C500">  </figure>
+    <figure><img src="https://parabuenosaires.com/wp-content/uploads/2013/07/1350669685_444989152_1-venta-de-garage-Neuquen-Capital.jpg">  </figure>
+    <figure><img src="https://scontent.fdgo1-1.fna.fbcdn.net/v/t1.0-9/15390979_580869085438680_3167480942741190258_n.jpg?_nc_cat=0&oh=fb196152cf301b04a7db59ed25baa9a0&oe=5BF45117">  </figure>
+    <figure><img src="https://www.visitacasas.com/wp-content/uploads/2011/08/Organizando-una-venta-de-garage.jpg">  </figure>
+    <figure><img src="https://i.pinimg.com/originals/6d/d7/06/6dd70635abdfc6b432e9cc534f984195.jpg">  </figure>
+    <figure><img src="http://diario.mx/imagesnotas/2015/03/EL_113877778bca9fd_0.jpg">  </figure>
+    <figure><img src="https://ugc.kn3.net/i/origin/http://www.nerdcast.net/articulos/fotos/coleccionar/Untitled-12.jpg">  </figure>
+                
+</div>
+</center>                   
+
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<% entretenimientos.forEach((entretenimiento)=>{%>
+<div class="panel panel-default">
+    <div class="panel-heading">
+    <% if(entretenimiento.descripcion){%>
+    <div class="panel-body">
+    <%= entretenimiento.nombre%></div>
+        <a>Descripcion: </a><p><%= entretenimiento.descripcion%></p>
+        <br>
+        <a>Direccion:</a><p> <%= entretenimiento.direccion%></a> <br>
+        <a>fecha y hora: </a><p><%= entretenimiento.date%></a>
+        <br>
+       
+    </div>
+
+    <%}%>
+</div>
+<%})%>
+<% include _footer%>
