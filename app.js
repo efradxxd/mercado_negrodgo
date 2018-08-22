@@ -13,7 +13,9 @@ var passportsetup = require("./passportsetup");
 var app = express();
 
 //mongoose.connect("mongodb://admin:admin123@ds221292.mlab.com:21292/turismo_dgo");
-mongoose.connect("mongodb://localhost:27017/turismo_dgo");
+//mongoose.connect("mongodb://localhost:27017/turismo_dgo");
+mongoose.connect("mongodb://<dbuser>:<dbpassword>@ds229552.mlab.com:29552/turismo_dgo");
+
 
 passportsetup();
 
